@@ -49,21 +49,25 @@ const ourTeam = [
     
 ];
 console.log(ourTeam);
-
+// Selezionare l'elemento html #list
+const listContainer = document.querySelector('#list');
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 for(let i = 0; i < ourTeam.length; i++) {
     const thisMember = ourTeam[i];
     console.log(`${thisMember.name} ${thisMember.role} ${thisMember.image}`);
-};
-
-//Stampare le stesse informazioni su DOM sottoforma di stringhe
-const listContainer = document.querySelector('#list');
-
-
-const newLi = `<li>
-<h3>Nome</h3>
-<p>Role</p>
-<div>Image</div>
-</li>`;
+    //Stampare le stesse informazioni su DOM sottoforma di stringhe
+    // creare costante con tutti gli elementi della lista
+    const newLi = `<li>
+    <h3>${thisMember.name}</h3>
+    <p>${thisMember.role}</p>
+    <div>${thisMember.image}</div>
+    </li>`;
 
 console.log(newLi);
+listContainer.innerHTML += newLi;
+};
+
+
+
+
+
