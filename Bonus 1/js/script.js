@@ -13,38 +13,42 @@ BONUS 2:
 Organizzare i singoli membri in card/schede
 */
 
+// BONUS 1:
+//Trasformare la stringa foto in una immagine effettiva
+
+
 // Creare l’array di oggetti con le informazioni fornite.
 
 const ourTeam = [
     {
         name: 'Wayne Barret',
         role: 'Founder & CEO',
-        image: 'wayne-barnett-founder-ceo.jpg'
+        image: 'img/wayne-barnett-founder-ceo.jpg'
     },    
     {
         name: 'Angela Carrol',
         role: 'Chief Editor',
-        image: 'angela-caroll-chief-editor.jpg'
+        image: 'img/angela-caroll-chief-editor.jpg'
     },    
     {
         name: 'Walter Gordon',
         role: 'Office Manager',
-        image: 'walter-gordon-office-manager.jpg'
+        image: 'img/walter-gordon-office-manager.jpg'
     },    
     {
         name: 'Angela Lopez',
         role: 'Social Media Manager',
-        image: 'angela-lopez-social-media-manager.jpg'
+        image: 'img/angela-lopez-social-media-manager.jpg'
     },    
     {
         name: 'Scott Estrada',
         role: 'Developer',
-        image: 'scott-estrada-developer.jpg'
+        image: 'img/scott-estrada-developer.jpg'
     },    
     {
         name: 'Barbara Ramos',
         role: 'Graphic Designer',
-        image: 'barbara-ramos-graphic-designer.jpg'
+        image: 'img/barbara-ramos-graphic-designer.jpg'
     }
     
 ];
@@ -55,12 +59,19 @@ const listContainer = document.querySelector('#list');
 for(let i = 0; i < ourTeam.length; i++) {
     const thisMember = ourTeam[i];
     console.log(`${thisMember.name} ${thisMember.role} ${thisMember.image}`);
+    
+    // creare elemento img con attributo src
+    const imgElement = document.createElement('img');
+    imgElement.src = thisMember.image;
+    console.log(imgElement)
+    
+    
     //Stampare le stesse informazioni su DOM sottoforma di stringhe
     // creare costante con tutti gli elementi della lista
     const newLi = `<li>
     <h3>${thisMember.name}</h3>
     <p>${thisMember.role}</p>
-    <div>${thisMember.image}</div>
+    <div>${imgElement.outerHTML}</div>
     </li>`;
 
 console.log(newLi);

@@ -13,6 +13,10 @@ BONUS 2:
 Organizzare i singoli membri in card/schede
 */
 
+
+
+
+
 // Creare l’array di oggetti con le informazioni fornite.
 
 const ourTeam = [
