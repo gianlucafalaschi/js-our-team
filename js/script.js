@@ -55,3 +55,5 @@ for(let i = 0; i < ourTeam.length; i++) {
     const thisMember = ourTeam[i];
     console.log(`${thisMember.name} ${thisMember.role} ${thisMember.image}`);
 };
+
+//Stampare le stesse informazioni su DOM sottoforma di stringhe
