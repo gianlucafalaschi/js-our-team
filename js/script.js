@@ -57,3 +57,13 @@ for(let i = 0; i < ourTeam.length; i++) {
 };
 
 //Stampare le stesse informazioni su DOM sottoforma di stringhe
+const listContainer = document.querySelector('#list');
+
+
+const newLi = `<li>
+<h3>Nome</h3>
+<p>Role</p>
+<div>Image</div>
+</li>`;
+
+console.log(newLi);
